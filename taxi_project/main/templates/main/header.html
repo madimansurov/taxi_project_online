@@ -1,0 +1,73 @@
+{% load static %}
+
+<header>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+      <!-- Логотип -->
+      <a class="navbar-brand" href="#">
+          <img src="{% static 'main/taxi_logo.png' %}" alt="#" style="width:80px;" class="rounded-circle">
+      </a>
+      <!-- Главная страница с ссылкой -->
+      <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'main:index_page' %}">Главная страница</a>
+              </li>
+              <!-- Раздел для водителей с выпадающим списком с ссылками -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Водителям</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'main:drivers_page' %}">Стать водителем</a></li>
+                          <li><a class="dropdown-item" href="{% url 'main:drivers_application_page' %}">Скачать приложение для водителей</a></li>
+                      </ul>
+              </li>
+             <!-- Раздел для пользователей с выпадающим списком с ссылками -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Пользователям</a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="{% url 'main:passengers_page' %}">Скачать приложение</a></li>
+                          <li><a class="dropdown-item" href="{% url 'main:helpdesk_page' %}">Написать в поддержку</a></li>
+                          <li><a class="dropdown-item" href="{% url 'main:index_page' %}">Заказать машину</a></li>
+                      </ul>
+              </li>
+          </ul>
+      </div>
+
+      <div>
+          <!-- Авторизация с всплывающим окном -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" >Вход/Авторизация</a>
+        </li>
+      </ul>
+      <!-- Всплывающее окно -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <!-- Заголовок -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">Войдите в Тұлпар ID</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Тело -->
+                  <div class="modal-body">
+                      Modal body..
+                  </div>
+
+                  <!-- Концовка -->
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Закрыть</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+</header>

@@ -1,0 +1,107 @@
+{% load static %}
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-warning text-black">
+
+  <!-- Раздел: Социальные сети -->
+
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+    <!-- Слева надпись -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Свяжитесь с нами также в социальных сетях:</span>
+    </div>
+
+    <!-- Справа, значки соц.сетей -->
+    <div>
+      <a class="me-4 text-reset ">
+        <img src="{% static 'main/facebook-logo.png' %}" alt="facebook" style="width:40px;" class="rounded-circle" >
+      </a>
+      <a class="me-4 text-reset">
+        <img src="{% static 'main/instagram-logo.png' %}" alt="instagram" style="width:40px;" class="rounded-circle">
+      </a>
+      <a class="me-4 text-reset">
+        <img src="{% static 'main/youtube-logo.png' %}" alt="youtube" style="width:40px;" class="rounded-circle">
+      </a>
+    </div>
+  </section>
+
+  <!-- Раздел: онтакты  -->
+
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+
+      <div class="row mt-3">
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+          <!-- Информация -->
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Тұлпар taxi
+          </h6>
+          <p>
+            "Тұлпар taxi" надежная служба такси в Алматы и Алматинской Области. Мы оказываем транспортные услуги, которые сделают Вашу поездку еще более комфортной.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Ссылки 1 -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Пользователям
+          </h6>
+          <p>
+            <a href="{% url 'main:passengers_page' %}" class="text-reset">Скачать приложение</a>
+          </p>
+          <p>
+            <a href="{% url 'main:helpdesk_page' %}" class="text-reset">Написать в поддержку</a>
+          </p>
+          <p>
+            <a href="{% url 'main:index_page' %}" class="text-reset">Заказать машину</a>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Ссылки 2 -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Водителям
+          </h6>
+          <p>
+            <a href="{% url 'main:drivers_page' %}" class="text-reset">Стать водителем</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Скачать приложение для водителей</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Адрес, номер, почта -->
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            Контакты
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Алматы, ул. Абая, 77</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            tulpar-taxi@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 7 701 077 07 07</p>
+          <p><i class="fas fa-print me-3"></i> + 7 777 077 07 07</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 ТОО "ТҰЛПАР":
+    <a class="text-reset fw-bold" href="{% url 'main:index_page' %}">tulpar-taxi@gmail.com</a>
+  </div>
+
+</footer>
+<!-- Footer -->
