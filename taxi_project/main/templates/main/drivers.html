@@ -4,7 +4,86 @@
 {% block title %} Drivers Page {% endblock %}
 
 {% block body %}
-    <h2>Drivers Page</h2>
+<div class="container-fluid row bg-warning">
 
+          <div class="container-fluid pt-2">
+
+              <div class="row">
+
+                  <!-- 1й раздел, 1й столбец - текст для водителей -->
+
+                  <div class="col-sm-4 my-auto">
+                      <h1 class="text-center">Работайте водителем такси в Казахстане</h1>
+                      <p class="text-center">
+                          став партнёром "Тұлпар taxi"
+                      </p>
+                  </div>
+
+                  <!-- 1й раздел, 2й столбец - картинка -->
+
+                      <!-- Карусель -->
+
+                  <div id="demo" class="carousel slide col-sm-4" data-bs-ride="carousel">
+
+                          <!-- 2 эемента для прокрутки -->
+
+                      <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                      </div>
+
+                          <!-- Эффект слайдшоу / картинки для главной страницы -->
+
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="{% static 'main/drivers_page.jpg' %}" alt="#" class="rounded d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="{% static 'main/drivers_page_1.jpg' %}" alt="#" class="rounded d-block w-100">
+                          </div>
+                      </div>
+
+                          <!-- Функция прокрутки картинок -->
+
+                      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                      </button>
+                  </div>
+
+                  <!-- 1й раздел, 3й столбец - текст по условиям -->
+
+                  <div class="col-sm-4 my-auto">
+                      <h3>Быстрый старт</h3>
+                      <p>
+                          От заявки до первого клиента — несколько часов
+                      </p>
+
+                      <h3>Деньги — сразу</h3>
+                      <p>
+                          Оплату за наличные заказы вы получите в первый день работы
+                      </p>
+
+                      <h3>Удобный график</h3>
+                      <p>
+                          Работайте несколько часов в день или полную смену
+                      </p>
+                  </div>
+              </div>
+
+              <div class="container-fluid pt-1">
+                  <div class="col-sm-12 my-auto">
+                      <h3>Оставляйте заявку прямо сейчас</h3>
+                      <img width="100" height="100" src="{% static 'main/down_arrow.gif' %}">
+                  </div>
+                  <div class="row">
+                      <a href="{% url 'main:login_page' %}" class="text-reset">Регистрация для водителей</a>
+                  </div>
+              </div>
+          </div>
+
+    </div>
 
 {% endblock %}

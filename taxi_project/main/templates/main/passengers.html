@@ -4,7 +4,55 @@
 {% block title %} Passengers Page {% endblock %}
 
 {% block body %}
-    <h2>Passengers Page</h2>
+ <div class="container-fluid row bg-warning pt-2">
+
+      <div class="row">
+
+          <!-- 1й раздел, 1й столбец - текст приложения для водителей + сслыка-->
+
+
+          <div class="col-sm-4 my-auto">
+              <h1>Скачайте наше мобильное приложение</h1>
+
+              <a href="#" class="text-reset ">Приложение "Тұлпар taxi"</a>
+          </div>
+
+
+          <!-- 1й раздел, 2й столбец - картинка -->
+
+              <!-- Карусель -->
+
+          <div id="demo" class="carousel slide col-sm-8" data-bs-ride="carousel">
+
+                  <!-- 2 эемента для прокрутки -->
+
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              </div>
+
+                  <!-- Эффект слайдшоу / картинки для главной страницы -->
+
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="{% static 'main/passengers_page_1.jpg' %}" alt="#" class="rounded d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="{% static 'main/passengers_page_2.jpg' %}" alt="#" class="rounded d-block w-100">
+                  </div>
+              </div>
+
+                  <!-- Функция прокрутки картинок -->
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+              </button>
+          </div>
+      </div>
+</div>
 
 
 {% endblock %}

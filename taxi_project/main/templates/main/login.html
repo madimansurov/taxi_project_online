@@ -4,7 +4,27 @@
 {% block title %} Login Page {% endblock %}
 
 {% block body %}
-    <h2>Login page</h2>
-
-
+<div class="bg-warning">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>Вход</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <form method="post" class="form mx-auto">
+                {% if error %}
+                    <p class="text-danger">{{ error }}</p>
+                {% endif %}
+                {% csrf_token %}
+                <input type="text" class="form-control w-25" placeholder="Имя пользователя" name="username" required>
+                <input type="password" class="form-control w-25" placeholder="Пароль" name="password" required>
+                <input type="submit" class="btn btn-primary" value="Войти">
+            </form>
+        </div>
+        <div class="col-sm-8">
+            <img class="w-100" src="{% static 'main/login_page.jpg' %}">
+        </div>
+    </div>
+</div>
 {% endblock %}

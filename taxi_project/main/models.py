@@ -31,3 +31,22 @@ class Passenger(models.Model):
         verbose_name_plural = 'Пассажиры'
 
 
+ #  Данные обращений доступные для суперАдмина
+
+class Comment(models.Model):
+    author = models.CharField(max_length=30, verbose_name="Автор обращения")
+    comment_text = models.TextField(verbose_name="Текст обращения")
+    created_date = models.DateField(auto_now_add=True, verbose_name="Дата создания обращения")
+    passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.author}: {self.created_date - {self.passenger}}"
+
+    # Русификация категории пользователей для суперАдмина
+    class Meta:
+        verbose_name = 'Обращение'
+        verbose_name_plural = 'Обращения'
+
+
+
+
